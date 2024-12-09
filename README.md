@@ -1,2 +1,1 @@
-These are some important files.
-these show how to use mongoose to connect out application to MongoDB database 
+This show how to use Mongoose to connect our application to the MongoDB database 
