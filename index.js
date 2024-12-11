@@ -14,7 +14,9 @@ db.once("open", ()=>{
 async function init(){
     const student={
         name: "Nikita",
-        age: 21
+        age: 21,
+        email: "nikitatewari1633@gmail.com",
+        subjects: ["english", "Computer"]
     }
    const std_obj=  await studentModel.create(student)
    console.log(std_obj)
