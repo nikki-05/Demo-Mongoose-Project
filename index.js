@@ -10,6 +10,11 @@ db.on("error", ()=>{
 db.once("open", ()=>{
     console.log("Connected to Mongo database")
     //logic to insert data into the db 
+    init()
+    //running the queries on mongodb
+    dbQueries()
+
+    
 });
 async function init(){
     const student={
@@ -20,4 +25,13 @@ async function init(){
     }
    const std_obj=  await studentModel.create(student)
    console.log(std_obj)
+}
+async function dbQueries(){ //find with name
+    try{
+    const students = await studentModel.find({name: "Nikita"})
+    console.log(students)
+    }
+    catch(err){
+        console.log(err)
+    }
 }
